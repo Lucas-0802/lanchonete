@@ -11,7 +11,7 @@ db.connect()
 //habilita CORS
 app.use(cors())
 
-//habilita server pra receber dados json
+//habilita server pra receber dados json teste
 app.use(express.json())
 
 //definindo rotas
