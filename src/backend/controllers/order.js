@@ -20,7 +20,7 @@ async function post(req, res) {
     } = req.body
 
     const order = new OrderModel({
-        codigoCliente,
+         codigoCliente,
          codigoProduto,
          dataCriacao,
          status,
