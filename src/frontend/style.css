@@ -1,0 +1,79 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: brown;
+}
+
+header {
+    background-color: white;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    margin-top: 20px;
+    list-style: none;
+    
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    background-color: brown;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.menu li a:hover {
+    background-color: white;
+    color: brown;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.main label {
+    padding: 5px;
+}
+
+.main input {
+    margin: 5px;
+    width: 90%;
+}
+
+.main button {
+    padding: 5px 20px;
+    background-color: brown;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.pedidos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btnPedidos {
+    margin-right: 5px;
+}

@@ -15,7 +15,7 @@ app.use(cors())
 app.use(express.json())
 
 //definindo rotas
-app.use('/api', routes)
+app.use('/lanchonete', routes)
 
 //executando o servidor
 const port = process.env.PORT || 8080
