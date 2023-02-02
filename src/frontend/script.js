@@ -41,32 +41,38 @@ function redirecionar() {
 
 cadastroPedido.onclick = function() {
    const realizarPedido = document.querySelector('#realizarPedido')
+    
 
-   realizarPedido.innerHTML = `
+    realizarPedido.innerHTML = `
    <br>
    <div class="pedido">
        <label>Selecione uma opção:</label>
-       <select name="select">
+       <select id="select">
        <option value=""></option>
-       <option value="pizza">Pizza</option>
-       <option value="hamburguer">Hamburguer</option>
-       <option value="hotdog">HotDog</option>
-        </select>
-        <input type="text">
-   </div>
-   <br>
-   <div class="pedido">
-       <label>Selecione uma opção:</label>
-       <select name="select">
-       <option value=""></option>
-       <option value="Coca-Cola">Coca-Cola</option>
-       <option value="Guaraná">Guaraná</option>
-       <option value="Pepsi">Pepsi</option>
         </select>
         <input type="text">
    </div>
    <br>
    <button id="finalizarPedido" class="btnPedidos">Finalizar Pedido</button>
    `
+   
+
+   fetch(`${API_URL}/products`).then(response => {
+    response.json().then(data => {
+        const name = data.map(product => `
+        <option>${product.name}</option>
+        `)
+        const html = name.reduce((acc, curr) =>  {
+            acc += curr
+
+            return acc
+        },'')
+        
+        const select = document.querySelector('#select')
+        select.innerHTML += html
+        console.log(select.value)
+    })
+})
+
 }
 
