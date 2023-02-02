@@ -77,3 +77,22 @@ header {
 .btnPedidos {
     margin-right: 5px;
 }
+
+.pedido {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pedido label {
+    width: 40%;
+}
+
+.pedido select {
+    width: 30%;
+    padding: 4px;
+}
+
+.pedido input {
+    width: 15%;
+    padding: 4px;
+}
